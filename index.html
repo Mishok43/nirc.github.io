@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Two-Level Monte Carlo estimator leveraging Neural Incident Radiance Cache (NIRC) for real-time global illumination rendering.">
-  <meta property="og:title" content="Neural Incident Radiance Cache (NIRC) for Real-time Rendering"/>
+  <meta property="og:title" content="Neural Two-Level Monte Carlo Real-Time Rendering"/>
   <meta property="og:description" content="Efficient real-time global illumination rendering using Neural Incident Radiance Cache combined with Two-Level Monte Carlo.">
   <meta property="og:url" content="YOUR_PROJECT_WEBSITE_URL"/>
   <meta property="og:image" content="static/images/TeaserNew.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-  <meta name="twitter:title" content="Neural Incident Radiance Cache (NIRC)">
-  <meta name="twitter:description" content="Real-time unbiased global illumination rendering with Neural Incident Radiance Cache.">
+  <meta name="twitter:title" content="Neural Two-Level Monte Carlo Real-Time Rendering">
   <meta name="twitter:image" content="static/images/TeaserNew.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords" content="Neural Rendering, Global Illumination, Path Tracing, Monte Carlo, Neural Incident Radiance Cache">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Neural Incident Radiance Cache (NIRC)</title>
+  <title>Neural Two-Level Monte Carlo Real-Time Rendering</title>
 
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -29,21 +28,33 @@
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop has-text-centered">
-      <h1 class="title is-1 publication-title">Neural Incident Radiance Cache (NIRC)</h1>
+      <h1 class="title is-1 publication-title">Neural Two-Level Monte Carlo Real-Time Rendering</h1>
       <div class="is-size-5 publication-authors">
-        <span class="author-block"><a href="LINK_TO_AUTHOR1">First Author</a><sup>*</sup>,</span>
-        <span class="author-block"><a href="LINK_TO_AUTHOR2">Second Author</a><sup>*</sup>,</span>
-        <span class="author-block"><a href="LINK_TO_AUTHOR3">Third Author</a></span>
+        <!-- 
+        Authors:
+        Mikhail Dereviannykh, Dmitrii Klepikov, Johannes Hanika, Carsten Dachsbacher
+        Johannes: https://jo.dreggn.org/home/
+        
+        -->
+        <span class="author-block"><b><a href="http://mishok43.com">Mikhail Dereviannykh</a></b>,</span>
+        <span class="author-block">Dmitrii Klepikov,</span>
+        <span class="author-block"><a href="https://jo.dreggn.org/home/">Johannes Hanika</a>,</span>
+        <span class="author-block">Carsten Dachsbacher</span>
+
+
       </div>
       <div class="is-size-5">
-        Institution Name<br>
-        Conference Name, Year
+        Karlsruhe Institute of Technology<br>
+        Eurographics, 2025 - Computer Graphics Forum 
       </div>
+      
+      <br>
+      
       <div class="publication-links">
-        <a href="https://arxiv.org/pdf/YOUR_PAPER_ID.pdf" class="button is-dark is-rounded">Paper</a>
-        <a href="static/pdfs/supplementary_material.pdf" class="button is-dark is-rounded">Supplementary</a>
-        <a href="https://github.com/YOUR_GITHUB_REPO" class="button is-dark is-rounded">Code</a>
-        <a href="https://arxiv.org/abs/YOUR_PAPER_ID" class="button is-dark is-rounded">arXiv</a>
+        <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.70050" class="button is-dark is-rounded">Paper</a>
+        <a href="#" class="button is-dark is-rounded">Code (Coming Soon)</a>
+        <a href="https://bwsyncandshare.kit.edu/s/bzAEZzqqw42ExNJ" class="button is-dark is-rounded">High-Res Video</a>
+        <a href="https://bwsyncandshare.kit.edu/s/tizLCRYD5zorcif" class="button is-dark is-rounded">Low-Res Video</a>
       </div>
     </div>
   </div>
@@ -53,40 +64,51 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <img src="static/images/TeaserNew.png" alt="Teaser Main Image">
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <img src="static/images/TeaserCache1ExtractedFrame.png">
-      </div>
-      <div class="column is-half">
-        <img src="static/images/TeaserCache1GTExtractedFrame.png">
+      <div class="column">
+        <img src="static/images/TeaserNew.svg" alt="Teaser Main Image" style="width:100%">
       </div>
     </div>
     <div class="columns is-centered">
-      <div class="column is-one-fifth">
-        <img src="static/images/0Reference.png">
-        <p class="has-text-centered">Reference</p>
-      </div>
-      <div class="column is-one-fifth">
-        <img src="static/images/0PT.png">
-        <p class="has-text-centered">Path Tracing</p>
-      </div>
-      <div class="column is-one-fifth">
-        <img src="static/images/0OurBiased.png">
-        <p class="has-text-centered">Ours [Biased]</p>
-      </div>
-      <div class="column is-one-fifth">
-        <img src="static/images/0NRC.png">
-        <p class="has-text-centered">NRC [Biased]</p>
-      </div>
-      <div class="column is-one-fifth">
-        <img src="static/images/0OurUnbiased.png">
-        <p class="has-text-centered">Ours [Unbiased]</p>
+      <div class="column">
+        <div class="columns is-centered" style="width:80%; margin:0 auto;">
+          <div class="column is-one-fifth" style="padding: 0.2rem;">
+            <img src="static/images/0Reference.png" style="width:100%; image-rendering: pixelated;">
+            <img src="static/images/1Reference.png" style="width:100%; margin-top:2px; image-rendering: pixelated;">
+            <p class="has-text-centered">Reference</p>
+          </div>
+          <div class="column is-one-fifth" style="padding: 0.2rem;">
+            <img src="static/images/0PT.png" style="width:100%; image-rendering: pixelated;">
+            <img src="static/images/1PT.png" style="width:100%; margin-top:2px; image-rendering: pixelated;">
+            <p class="has-text-centered">PT [<span style="color: rgba(90, 186, 179, 1)">Unbiased</span>]</p>
+          </div>
+          <div class="column is-one-fifth" style="padding: 0.2rem;">
+            <img src="static/images/0OurBiased.png" style="width:100%; image-rendering: pixelated;">
+            <img src="static/images/1OurBiased.png" style="width:100%; margin-top:2px; image-rendering: pixelated;">
+            <p class="has-text-centered">Ours [<span style="color: rgba(244, 112, 112, 1)">Biased</span>]</p>
+          </div>
+          <div class="column is-one-fifth" style="padding: 0.2rem;">
+            <img src="static/images/0NRC.png" style="width:100%; image-rendering: pixelated;">
+            <img src="static/images/1NRCBiased.png" style="width:100%; margin-top:2px; image-rendering: pixelated;">
+            <p class="has-text-centered"><a href="https://research.nvidia.com/publication/2021-06_real-time-neural-radiance-caching-path-tracing" style="text-decoration: underline; color: inherit;">NRC</a> [<span style="color: rgba(244, 112, 112, 1)">Biased</span>]</p>
+          </div>
+          <div class="column is-one-fifth" style="padding: 0.2rem;">
+            <img src="static/images/0OurUnbiased.png" style="width:100%; image-rendering: pixelated;">
+            <img src="static/images/1OurUnbiased.png" style="width:100%; margin-top:2px; image-rendering: pixelated;">
+            <p class="has-text-centered">Ours [<span style="color: rgba(90, 186, 179, 1)">Unbiased</span>]</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="columns is-centered">
-      <img src="static/images/TeaserLoss2.png" alt="Convergence Plot">
+  </div>
+</section>
+
+<!-- TLTR Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-justified">
+      <p style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4); padding: 20px; border-radius: 10px; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+        <strong style="color: #FFE66D;">TLTR:</strong> We present <span style="color: #FFE66D;">Neural Incident Radiance Cache (NIRC)</span> for efficient fully-fused neural network-based Global Illumination integration, combined with <span style="color: #FFE66D;">Two-Level Monte Carlo</span> for unbiased results - achieving faster training and better representation than previous methods.
+      </p>
     </div>
   </div>
 </section>
@@ -96,18 +118,69 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Abstract</h2>
     <p class="content has-text-justified">
-      We introduce an efficient Two-Level Monte Carlo estimator for real-time rendering leveraging Neural Incident Radiance Cache (NIRC)...
-    </p>
+      We introduce an efficient <strong>Two-Level Monte Carlo</strong> (subset of Multi-Level Monte Carlo, MLMC) estimator for real-time renderingof scenes with global illumination. Using MLMC we split the shading integral into two parts: the radiance cache integral andthe residual error integral that compensates for the bias of the first one. For the first part, we developed the <strong>Neural Incident Radiance Cache (NIRC)</strong> leveraging the power of tiny neural networks [MRNK21] as a building block, which is trained on thefly. The cache is designed to provide a fast and reasonable approximation of the incident radiance: an evaluation takes <strong>2-25×</strong> less compute time than a path tracing sample. This enables us to estimate the radiance cache integral with a high number ofsamples and by this achieve faster convergence. For the residual error integral, we compute the difference between the NIRCpredictions and the unbiased path tracing simulation. Our method makes no assumptions about the geometry, materials, orlighting of a scene and has only few intuitive hyper-parameters. We provide a comprehensive comparative analysis in differentexperimental scenarios. Since the algorithm is trained in an on-line fashion, it demonstrates significant noise level reductioneven for dynamic scenes and can easily be combined with other noise reduction techniques    </p>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      Built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>.
-      Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a>.
-    </p>
+
+
+<!-- Method Overview Figure Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Method Overview</h2>
+        <figure class="image">
+          <!-- Replace path/to/your/figure.svg with the actual path once you convert your PDF -->
+          <img src="static/images/PathFigure2.svg" alt="Method Overview" style="width: 100%; height: auto;">
+        </figure>
+      </div>
+    </div>
   </div>
+
+  
+</section>
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{https://doi.org/10.1111/cgf.70050,
+      author = {Dereviannykh, Mikhail and Klepikov, Dmitrii and Hanika, Johannes and Dachsbacher, Carsten},
+      title = {Neural Two-Level Monte Carlo Real-Time Rendering},
+      journal = {Computer Graphics Forum},
+      volume = {n/a},
+      number = {n/a},
+      pages = {e70050},
+      keywords = {CCS Concepts, • Computing methodologies → Ray tracing, Neural networks},
+      doi = {https://doi.org/10.1111/cgf.70050},
+      url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.70050},
+      eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.70050},
+      abstract = {Abstract We introduce an efficient Two-Level Monte Carlo (subset of Multi-Level Monte Carlo, MLMC) estimator for real-time rendering of scenes with global illumination. Using MLMC we split the shading integral into two parts: the radiance cache integral and the residual error integral that compensates for the bias of the first one. For the first part, we developed the Neural Incident Radiance Cache (NIRC) leveraging the power of tiny neural networks [MRNK21] as a building block, which is trained on the fly. The cache is designed to provide a fast and reasonable approximation of the incident radiance: an evaluation takes 2–25 × less compute time than a path tracing sample. This enables us to estimate the radiance cache integral with a high number of samples and by this achieve faster convergence. For the residual error integral, we compute the difference between the NIRC predictions and the unbiased path tracing simulation. Our method makes no assumptions about the geometry, materials, or lighting of a scene and has only few intuitive hyper-parameters. We provide a comprehensive comparative analysis in different experimental scenarios. Since the algorithm is trained in an on-line fashion, it demonstrates significant noise level reduction even for dynamic scenes and can easily be combined with other noise reduction techniques.}
+      }
+      
+      </code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+
+        <p>
+          This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+          Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
 </footer>
 
 </body>

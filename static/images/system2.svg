@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100%"
+   height="100%"
+   viewBox="0 0 762 465"
+   version="1.1"
+   xml:space="preserve"
+   style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;"
+   id="svg301"
+   sodipodi:docname="system2.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:serif="http://www.serif.com/"><defs
+   id="defs305"><marker
+     style="overflow:visible"
+     id="Arrow1L"
+     refX="0"
+     refY="0"
+     orient="auto-start-reverse"
+     inkscape:stockid="Arrow1L"
+     markerWidth="8.75"
+     markerHeight="5"
+     viewBox="0 0 8.75 5"
+     inkscape:isstock="true"
+     inkscape:collect="always"
+     preserveAspectRatio="xMidYMid"><path
+       style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+       d="M 0,0 5,-5 -12.5,0 5,5 Z"
+       id="arrow1L"
+       transform="scale(-0.5)" /></marker><marker
+     style="overflow:visible"
+     id="Arrow2"
+     refX="0"
+     refY="0"
+     orient="auto-start-reverse"
+     inkscape:stockid="Arrow2"
+     markerWidth="4.125"
+     markerHeight="3"
+     viewBox="0 0 7.7 5.6"
+     inkscape:isstock="true"
+     inkscape:collect="always"
+     preserveAspectRatio="xMidYMid"><path
+       transform="scale(0.7)"
+       d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+       style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+       id="arrow2L" /></marker></defs><sodipodi:namedview
+   id="namedview303"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="1.7349081"
+   inkscape:cx="282.14751"
+   inkscape:cy="233.15356"
+   inkscape:window-width="2560"
+   inkscape:window-height="1418"
+   inkscape:window-x="0"
+   inkscape:window-y="22"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer-1" />
+    <g
+   id="Layer-1"
+   serif:id="Layer 1"
+   transform="matrix(1,0,0,1,295.254,-46.5069)">
+        <rect
+   id="rect234"
+   x="323.487"
+   y="87.97"
+   width="141.128"
+   height="275.492"
+   style="fill:none;stroke:black;stroke-width:2.83px;" />
+        <g
+   transform="matrix(1,0,0,1,412.088,79.7754)"
+   id="g6">
+            <g
+   id="text896">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text3">MLP</text>
+            </g>
+        </g>
+        <path
+   id="path4991"
+   d="M-73.147,293.944L-223.147,293.944C-223.147,293.944 -201.865,316.038 -178.147,323.944C-155.647,331.444 -146.776,320.219 -133.147,316.444C-113.28,310.941 -111.459,324.349 -95.647,316.444C-80.647,308.944 -73.147,293.944 -73.147,293.944Z"
+   style="fill-opacity:0.14;fill-rule:nonzero;" />
+        <rect
+   id="rect1050"
+   x="345"
+   y="105"
+   width="97.5"
+   height="30"
+   style="fill:none;stroke:black;stroke-width:2.83px;" />
+        <g
+   transform="matrix(1,0,0,1,393.4,126.058)"
+   id="g13">
+            <g
+   id="text1054">
+                <text
+   x="-11.123px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text10">64</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,137.132,244.055)"
+   id="g18">
+            <g
+   id="text1054-6">
+                <text
+   x="-11.123px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text15">64</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,111.301,450.64)"
+   id="g23">
+            <g
+   id="text14828">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text20">3+8+4</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,207.125,341.444)"
+   id="g28">
+            <g
+   id="text14832">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text25">24</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,173.527,135.801)"
+   id="g33">
+            <g
+   id="text14836">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text30">25</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-169.657,322.709)"
+   id="g38">
+            <g
+   id="text14840">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text35">$x_i$</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-270.907,225.209)"
+   id="g43">
+            <g
+   id="text14840-5">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text40">$\omega_{i,k}$</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-206.073,169.707)"
+   id="g48">
+            <g
+   id="text14840-5-8">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text45">$\omega_{i,k}$</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-145.323,207.457)"
+   id="g53">
+            <g
+   id="text14840-5-81">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text50">$\omega_{i,k}$</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-47.1627,270.957)"
+   id="g58">
+            <g
+   id="text14840-5-3">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text55">$\omega_{i,k}$</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-296.494,352.983)"
+   id="g63">
+            <g
+   id="text14844">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text60">$\bar{x}$</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-296.494,84.301)"
+   id="g68">
+            <g
+   id="text14844-1">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text65">$\bar{\omega}$</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-296.494,404.399)"
+   id="g73">
+            <g
+   id="text14844-5">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text70">$\bar{\phi}$</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-266.193,373.818)"
+   id="g78">
+            <g
+   id="text14875">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text75">position</text>
+            </g>
+        </g>
+        <g
+   id="text14879">
+            <g
+   transform="matrix(1,0,0,1,-265.413,430.11)"
+   id="g82">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text80">albedo, normal,</text>
+            </g>
+            <g
+   transform="matrix(1,0,0,1,-265.413,455.11)"
+   id="g86">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text84">roughness</text>
+            </g>
+        </g>
+        <path
+   id="path3812"
+   d="M393.75,135L393.75,183.75"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <g
+   id="g3598"
+   transform="matrix(1,0,0,1,-10.0848,-4.5)">
+            <circle
+   id="path1221"
+   cx="403.835"
+   cy="161.948"
+   r="16.419"
+   style="fill:white;stroke:black;stroke-width:2.83px;" />
+            <path
+   id="path1392"
+   d="M392.806,166.536L405.772,166.529L414.784,154.03"
+   style="fill:white;fill-rule:nonzero;stroke:rgb(201,39,39);stroke-width:2.83px;stroke-linecap:butt;" />
+        </g>
+        <rect
+   id="rect1050-7"
+   x="345.56"
+   y="195.922"
+   width="97.5"
+   height="30"
+   style="fill:none;stroke:black;stroke-width:2.83px;" />
+        <g
+   transform="matrix(1,0,0,1,393.96,216.98)"
+   id="g97">
+            <g
+   id="text1054-5">
+                <text
+   x="-11.123px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text94">64</text>
+            </g>
+        </g>
+        <rect
+   id="rect1050-7-0"
+   x="345.56"
+   y="323.422"
+   width="97.5"
+   height="30"
+   style="fill:none;stroke:black;stroke-width:2.83px;" />
+        <g
+   transform="matrix(1,0,0,1,393.96,344.48)"
+   id="g103">
+            <g
+   id="text1054-5-9">
+                <text
+   x="-11.123px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(79,64,64);"
+   id="text100">64</text>
+            </g>
+        </g>
+        <path
+   id="path3812-5"
+   d="M393.75,225L393.75,273.75"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <path
+   id="path3812-5-6"
+   d="M393.75,352.5L393.75,401.25"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <g
+   id="g3598-6"
+   transform="matrix(1,0,0,1,-9.52484,86.4224)">
+            <circle
+   id="path1221-2"
+   cx="403.835"
+   cy="161.948"
+   r="16.419"
+   style="fill:white;stroke:black;stroke-width:2.83px;" />
+            <path
+   id="path1392-9"
+   d="M392.806,166.536L405.772,166.529L414.784,154.03"
+   style="fill:white;fill-rule:nonzero;stroke:rgb(201,39,39);stroke-width:2.83px;stroke-linecap:butt;" />
+        </g>
+        <g
+   transform="matrix(1,0,0,1,393.845,299.72)"
+   id="g113">
+            <g
+   id="text4416">
+                <text
+   x="-8.335px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;"
+   id="text110">...</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,186.883,338.73)"
+   id="g118">
+            <g
+   id="text4416-2">
+                <text
+   x="-8.335px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;"
+   id="text115">...</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,386.9,434.5)"
+   id="g123">
+            <g
+   id="text4712">
+                <text
+   x="-30.02px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;"
+   id="text120">Output</text>
+            </g>
+        </g>
+        <path
+   id="path4769"
+   d="M285.674,267.417L285.674,511.507"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.05px;stroke-linecap:butt;" />
+        <path
+   id="path4769-7"
+   d="M1.417,46.507L1.417,511.507"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;" />
+        <g
+   transform="matrix(1,0,0,1,314.2,505.48)"
+   id="g130">
+            <g
+   id="text4773">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;"
+   id="text127">(3) inference</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,94.3013,503.84)"
+   id="g135">
+            <g
+   id="text4773-2">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;"
+   id="text132">(2) encode</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,-194.328,503.84)"
+   id="g140">
+            <g
+   id="text4773-1">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;"
+   id="text137">(1) gather</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,16.0255,412.5)"
+   id="g145">
+            <g
+   id="text4959">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;"
+   id="text142">identity/one blob</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,15.8855,292.958)"
+   id="g150">
+            <g
+   id="text4963">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;"
+   id="text147">hashed grid</text>
+            </g>
+        </g>
+        <g
+   transform="matrix(1,0,0,1,16.5655,88.5)"
+   id="g155">
+            <g
+   id="text4967">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;"
+   id="text152">spherical harmonics</text>
+            </g>
+        </g>
+        <path
+   id="path6615"
+   d="M-245.647,263.944C-245.647,241.444 -223.147,241.444 -208.147,226.444C-195.242,215.733 -202.35,182.95 -185.647,181.444C-160.748,179.199 -155.647,218.944 -133.147,226.444C-118.917,231.187 -50.647,173.944 -35.647,188.944C-20.647,203.944 -45.031,282.882 -80.647,286.444C-118.147,290.194 -118.147,293.944 -155.647,293.944C-193.147,293.944 -245.647,287.661 -245.647,263.944Z"
+   style="fill:rgb(251,191,0);fill-opacity:0.39;fill-rule:nonzero;stroke:rgb(251,191,0);stroke-width:2.83px;stroke-linecap:butt;" />
+        <path
+   id="path6613"
+   d="M-223.147,293.944L-73.147,293.944"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;" />
+        <g
+   id="g11707"
+   transform="matrix(1,0,0,1,31.8525,7.44367)">
+            <path
+   id="path11323"
+   d="M-189.833,290.257L-182.333,282.757"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;" />
+            <path
+   id="path11703"
+   d="M-189.833,282.757L-182.333,290.257"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;" />
+        </g>
+        <path
+   id="path11709"
+   d="M-154.23,295.451L-214.23,242.951"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;stroke-dasharray:1, 1;marker-end:url(#Arrow2)" />
+        <path
+   id="path11709-0"
+   d="M-154.23,295.451L-116.73,227.951"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;stroke-dasharray:1, 1;marker-end:url(#Arrow2)" />
+        <path
+   id="path11709-7"
+   d="M-154.23,295.451L-56.73,257.951"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;stroke-dasharray:1, 1;marker-end:url(#Arrow2)" />
+        <path
+   id="path11709-2"
+   d="M-154.23,295.451L-184.23,190.451"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.83px;stroke-linecap:butt;stroke-dasharray:1, 1;marker-end:url(#Arrow2)" />
+        <g
+   id="g12281">
+            <rect
+   id="rect12167"
+   x="-268.583"
+   y="69.007"
+   width="255"
+   height="15"
+   style="fill:none;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169"
+   d="M-253.583,69.007L-253.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171"
+   d="M-238.583,69.007L-238.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173"
+   d="M-223.583,69.007L-223.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175"
+   d="M-208.583,69.007L-208.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-2"
+   d="M-193.583,69.007L-193.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-8"
+   d="M-178.583,69.007L-178.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-9"
+   d="M-163.583,69.007L-163.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-7"
+   d="M-148.583,69.007L-148.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-3"
+   d="M-133.583,69.007L-133.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-6"
+   d="M-118.583,69.007L-118.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-1"
+   d="M-103.583,69.007L-103.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-2"
+   d="M-88.583,69.007L-88.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-9"
+   d="M-73.583,69.007L-73.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-3"
+   d="M-58.583,69.007L-58.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-19"
+   d="M-43.583,69.007L-43.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-4"
+   d="M-28.583,69.007L-28.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+        </g>
+        <g
+   id="g12281-6"
+   transform="matrix(1,0,0,1,1.88977e-06,322.5)">
+            <rect
+   id="rect12167-8"
+   x="-268.583"
+   y="69.007"
+   width="255"
+   height="15"
+   style="fill:none;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-92"
+   d="M-253.583,69.007L-253.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-66"
+   d="M-238.583,69.007L-238.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-4"
+   d="M-223.583,69.007L-223.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-9"
+   d="M-208.583,69.007L-208.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-2-5"
+   d="M-193.583,69.007L-193.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-8-0"
+   d="M-178.583,69.007L-178.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-9-4"
+   d="M-163.583,69.007L-163.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-7-8"
+   d="M-148.583,69.007L-148.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-3-7"
+   d="M-133.583,69.007L-133.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-6-1"
+   d="M-118.583,69.007L-118.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-1-7"
+   d="M-103.583,69.007L-103.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-2-2"
+   d="M-88.583,69.007L-88.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-9-7"
+   d="M-73.583,69.007L-73.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-3-2"
+   d="M-58.583,69.007L-58.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-19-2"
+   d="M-43.583,69.007L-43.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-4-6"
+   d="M-28.583,69.007L-28.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+        </g>
+        <g
+   id="g12281-1"
+   transform="matrix(1,0,0,1,0,270)">
+            <rect
+   id="rect12167-0"
+   x="-268.583"
+   y="69.007"
+   width="255"
+   height="15"
+   style="fill:none;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-6"
+   d="M-253.583,69.007L-253.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-1"
+   d="M-238.583,69.007L-238.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-5"
+   d="M-223.583,69.007L-223.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-94"
+   d="M-208.583,69.007L-208.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-2-9"
+   d="M-193.583,69.007L-193.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-8-09"
+   d="M-178.583,69.007L-178.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-9-1"
+   d="M-163.583,69.007L-163.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-7-7"
+   d="M-148.583,69.007L-148.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-3-71"
+   d="M-133.583,69.007L-133.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-6-15"
+   d="M-118.583,69.007L-118.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-1-9"
+   d="M-103.583,69.007L-103.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-2-7"
+   d="M-88.583,69.007L-88.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12169-9-76"
+   d="M-73.583,69.007L-73.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12171-3-7"
+   d="M-58.583,69.007L-58.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12173-19-3"
+   d="M-43.583,69.007L-43.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path12175-4-65"
+   d="M-28.583,69.007L-28.583,84.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+        </g>
+        <g
+   id="g13413"
+   transform="matrix(1,0,0,1,-17.7491,-19.1431)">
+            <g
+   id="g12724"
+   transform="matrix(1,0,0,1,-2.37802,236.55)">
+                <ellipse
+   id="path12518-7"
+   cx="143.762"
+   cy="-79.134"
+   rx="4.82"
+   ry="8.498"
+   style="fill:rgb(108,173,216);stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+                <g
+   id="path12518-3"
+   transform="matrix(0.0530411,0.998592,-0.998592,0.0530411,0,0)">
+                    <ellipse
+   cx="-80.24"
+   cy="-148.39"
+   rx="4.82"
+   ry="8.498"
+   style="fill:rgb(216,184,108);stroke:black;stroke-width:1.42px;stroke-linecap:butt;"
+   id="ellipse221" />
+                </g>
+                <g
+   id="path12518-3-0-6"
+   transform="matrix(0.0512285,0.998687,-0.998491,0.0549175,0,0)">
+                    <ellipse
+   cx="-76.49"
+   cy="-183.293"
+   rx="3.837"
+   ry="6.533"
+   style="fill:rgb(216,184,108);stroke:black;stroke-width:1.11px;stroke-linecap:butt;"
+   id="ellipse224" />
+                </g>
+                <ellipse
+   id="path12518"
+   cx="143.765"
+   cy="-97.22"
+   rx="4.82"
+   ry="8.498"
+   style="fill:rgb(108,173,216);stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+                <ellipse
+   id="path12518-8"
+   cx="179.429"
+   cy="-80.486"
+   rx="4.886"
+   ry="6.895"
+   style="fill:rgb(108,173,216);stroke:black;stroke-width:1.29px;stroke-linecap:butt;" />
+                <ellipse
+   id="path12518-4"
+   cx="179.217"
+   cy="-94.815"
+   rx="4.915"
+   ry="6.253"
+   style="fill:rgb(108,173,216);stroke:black;stroke-width:1.23px;stroke-linecap:butt;" />
+                <g
+   id="path12518-3-0"
+   transform="matrix(0.0511607,0.99869,-0.998487,0.0549902,0,0)">
+                    <ellipse
+   cx="-80.645"
+   cy="-183.51"
+   rx="3.841"
+   ry="6.533"
+   style="fill:rgb(216,184,108);stroke:black;stroke-width:1.11px;stroke-linecap:butt;"
+   id="ellipse230" />
+                </g>
+                <g
+   id="path12518-5-0"
+   transform="matrix(0.756355,-0.654161,0.654161,0.756355,0,0)">
+                    <ellipse
+   cx="139.871"
+   cy="14.104"
+   rx="4.82"
+   ry="8.498"
+   style="fill:rgb(108,173,216);stroke:black;stroke-width:1.42px;stroke-linecap:butt;"
+   id="ellipse233" />
+                </g>
+                <g
+   id="path12518-3-6-1"
+   transform="matrix(0.673992,0.738739,-0.738739,0.673992,0,0)">
+                    <ellipse
+   cx="8.826"
+   cy="-130.51"
+   rx="4.82"
+   ry="8.498"
+   style="fill:rgb(216,184,108);stroke:black;stroke-width:1.42px;stroke-linecap:butt;"
+   id="ellipse236" />
+                </g>
+                <g
+   id="path12518-3-6"
+   transform="matrix(0.673992,0.738739,-0.738739,0.673992,0,0)">
+                    <ellipse
+   cx="8.495"
+   cy="-148.771"
+   rx="4.82"
+   ry="8.498"
+   style="fill:rgb(216,184,108);stroke:black;stroke-width:1.42px;stroke-linecap:butt;"
+   id="ellipse239" />
+                </g>
+                <g
+   id="path12518-5"
+   transform="matrix(0.756355,-0.654161,0.654161,0.756355,0,0)">
+                    <ellipse
+   cx="139.583"
+   cy="-3.208"
+   rx="4.82"
+   ry="8.498"
+   style="fill:rgb(108,173,216);stroke:black;stroke-width:1.42px;stroke-linecap:butt;"
+   id="ellipse242" />
+                </g>
+            </g>
+            <rect
+   id="rect12778"
+   x="64.166"
+   y="118.15"
+   width="157.5"
+   height="60"
+   style="fill:none;stroke:black;stroke-width:2.83px;stroke-linecap:butt;" />
+        </g>
+        <rect
+   id="rect12778-3"
+   x="46.417"
+   y="301.507"
+   width="195"
+   height="67.5"
+   style="fill:none;stroke:black;stroke-width:2.83px;stroke-linecap:butt;" />
+        <rect
+   id="rect12778-3-0"
+   x="46.417"
+   y="219.007"
+   width="198.75"
+   height="37.5"
+   style="fill:none;stroke:black;stroke-width:2.83px;stroke-linecap:butt;" />
+        <rect
+   id="rect12778-3-0-9"
+   x="46.417"
+   y="425.257"
+   width="195"
+   height="37.5"
+   style="fill:none;stroke:black;stroke-width:2.83px;stroke-linecap:butt;" />
+        <g
+   id="g13246">
+            <rect
+   id="rect13062"
+   x="61.417"
+   y="316.507"
+   width="37.5"
+   height="37.5"
+   style="fill:none;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path13186"
+   d="M61.417,316.507L72.667,327.757"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <path
+   id="path13186-7"
+   d="M72.667,327.757L98.917,316.507"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <path
+   id="path13186-6"
+   d="M72.667,327.757L98.917,354.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <path
+   id="path13186-5"
+   d="M72.667,327.757L61.417,354.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <ellipse
+   id="path13064-2"
+   cx="61.371"
+   cy="316.499"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-6"
+   cx="98.871"
+   cy="316.499"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-1"
+   cx="98.871"
+   cy="353.999"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-5"
+   cx="61.371"
+   cy="353.999"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-54"
+   cx="72.621"
+   cy="327.749"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+        </g>
+        <g
+   id="g13246-6"
+   transform="matrix(0.586043,0,0,0.586043,76.5124,146.383)">
+            <rect
+   id="rect13062-9"
+   x="61.417"
+   y="316.507"
+   width="37.5"
+   height="37.5"
+   style="fill:none;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path13186-3"
+   d="M61.417,316.507L72.667,327.757"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <path
+   id="path13186-7-7"
+   d="M72.667,327.757L98.917,316.507"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <path
+   id="path13186-6-4"
+   d="M72.667,327.757L98.917,354.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <path
+   id="path13186-5-5"
+   d="M72.667,327.757L61.417,354.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <ellipse
+   id="path13064-2-2"
+   cx="61.371"
+   cy="316.499"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-6-5"
+   cx="98.871"
+   cy="316.499"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-1-4"
+   cx="98.871"
+   cy="353.999"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-5-7"
+   cx="61.371"
+   cy="353.999"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-54-4"
+   cx="72.621"
+   cy="327.749"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+        </g>
+        <g
+   id="g13246-4"
+   transform="matrix(-0.000922873,0.337111,-0.337111,-0.000922873,264.008,320.916)">
+            <rect
+   id="rect13062-3"
+   x="61.417"
+   y="316.507"
+   width="37.5"
+   height="37.5"
+   style="fill:none;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <path
+   id="path13186-0"
+   d="M61.417,316.507L72.667,327.757"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <path
+   id="path13186-7-78"
+   d="M72.667,327.757L98.917,316.507"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <path
+   id="path13186-6-6"
+   d="M72.667,327.757L98.917,354.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <path
+   id="path13186-5-8"
+   d="M72.667,327.757L61.417,354.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.13px;stroke-linecap:butt;stroke-dasharray:0.4,0.4;" />
+            <ellipse
+   id="path13064-2-8"
+   cx="61.371"
+   cy="316.499"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-6-4"
+   cx="98.871"
+   cy="316.499"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-1-3"
+   cx="98.871"
+   cy="353.999"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-5-1"
+   cx="61.371"
+   cy="353.999"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+            <ellipse
+   id="path13064-2-54-49"
+   cx="72.621"
+   cy="327.749"
+   rx="3.704"
+   ry="3.742"
+   style="fill:white;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+        </g>
+        <g
+   transform="matrix(1,0,0,1,16.4173,204.007)"
+   id="g287">
+            <g
+   id="text13851">
+                <text
+   x="0px"
+   y="0px"
+   style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(7,7,7);"
+   id="text284">neural input vector</text>
+            </g>
+        </g>
+        <path
+   id="path14163"
+   d="M245.167,234.007C245.167,234.007 278.917,234.007 293.917,211.507C323.302,167.43 294.164,70.216 346.417,61.507C391.417,54.007 391.417,80.257 391.417,80.257"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.27px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <path
+   id="path14249"
+   d="M241.417,339.007C241.417,339.007 256.417,339.007 256.417,316.507C256.417,289.99 222.667,260.257 222.667,260.257"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <path
+   id="path14251"
+   d="M241.417,444.007C241.417,444.007 275.167,447.757 278.917,387.757C284.531,297.932 241.417,260.257 241.417,260.257"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <path
+   id="path14253"
+   d="M-81.083,406.507C-81.083,406.507 -73.583,444.007 -36.083,444.007L42.667,444.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <path
+   id="path14489"
+   d="M-81.083,354.007C-81.083,354.007 -73.583,376.507 -51.083,376.507C8.917,376.507 42.667,350.257 42.667,350.257"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <path
+   id="path18414"
+   d="M203.917,125.257C203.917,125.257 256.417,136.507 256.417,166.507C256.417,204.007 237.667,215.257 237.667,215.257"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <path
+   id="path18502"
+   d="M-111.083,84.007C-111.083,84.007 -103.583,129.007 -58.583,129.007L42.667,129.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;marker-end:url(#Arrow1L)" />
+        <path
+   id="path18502-4"
+   d="M-231.083,84.007C-231.083,84.007 -223.583,129.007 -178.583,129.007L-77.333,129.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+        <path
+   id="path18502-3"
+   d="M-201.083,84.007C-201.083,84.007 -193.583,129.007 -148.583,129.007L-47.333,129.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+        <path
+   id="path18502-5"
+   d="M-170.384,83.298C-170.384,83.298 -163.583,129.007 -118.583,129.007L-17.333,129.007"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.42px;stroke-linecap:butt;" />
+        <path
+   id="path484"
+   d="M1.122,268.377L284.587,268.377"
+   style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2.06px;stroke-linejoin:miter;" />
+    </g>
+</svg>
