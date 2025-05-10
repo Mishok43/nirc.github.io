@@ -222,28 +222,46 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column">
-        <h2 class="title is-3 has-text-centered">Method Overview</h2>
+        <h2 class="title is-3 has-text-centered">What's New?</h2>
         <figure class="image">
-          <!-- Replace path/to/your/figure.svg with the actual path once you convert your PDF -->
           <img src="static/images/PathFigure2.svg" alt="Method Overview" style="width: 100%; height: auto;">
-        </figure>
+        
+        <div class="content has-text-justified mt-5">
+          <p>
+            We introduce <em>Neural <strong>Incident</strong> Radiance Cache (NIRC)</em>, unlike previous Neural Radiance Caching (NRC) [MRNK21] that predicts outgoing radiance. This enables several key advantages:
+            <li>⚡Immediate cache utilization at primary bounces w/o additional ray tracing and 🎨 BSDF properties preservation (use our new <em>Balanced Termination Heuristic (BTH)</em> for a later path termination)</li>
+            <li>⚡Multiresolution neural hash grid evaluation cost amortized across all directional samples (-70% compute time)</li>
+            <li>🚀With inlined invokations performance scales directly with tensor-core compute power, benefiting from the trend of growing GPUs pure compute power and quantization</li>
+            <li>⏰ For unbiased-rendering NIRC achieves reasonable cache quality in dozens of frames vs thousands for Neural Control Variates (NCV) [MRKN20], as it does not need to predict the integral itself ⟹ <em>no architectural constraints</em>.</li>
+          </ul>
+
+          <div style="margin-bottom: 1%;"></div>
+
+
+          <div class="columns">
+            <div class="column is-6">
+              <figure class="image">
+                <img src="static/images/performance.svg" alt="Performance Comparison" style="width: 100%; height: auto;">
+                <figcaption class="has-text-centered mt-2">Performance study with the Bistro Exterior scene
+                  rendered on an RTX 3080 at 1080p. Path-Tracing vs NRC vs NIRC (Ours) with a few low-level optimizations. </figcaption>
+              </figure>
+            </div>
+            <div class="column is-6">
+              <figure class="image" style="margin-top: 4%">
+                <video width="100%" height="auto" autoplay loop muted playsinline>
+                  <source src="static/videos/cache.mp4" type="video/mp4">
+                </video>
+                <figcaption class="has-text-centered mt-2">On-the-fly NIRC visualization for an arbitrary point in the Sponza scene</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-
 </section>
 
-<!-- Work in Progress Notice -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="notification is-warning">
-      <p class="has-text-centered">
-        <strong>Note:</strong> This project page is currently under construction. More content and details will be added soon.
-      </p>
-    </div>
-  </div>
-</section>
+
 
 <!--BibTex citation -->
 <section class="section" id="BibTeX">
