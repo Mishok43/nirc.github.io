@@ -86,6 +86,23 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="image_src" href="https://mishok43.github.io/nirc/static/images/TeaserNew.jpg"/>
+
+  <!-- MathJax -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
 
@@ -138,6 +155,9 @@
         <div class="columns is-centered is-mobile is-multiline mb-0" style="width:100%; margin:0 auto;">
           <div class="column is-one-fifth-desktop is-one-fifth-tablet is-2-mobile" style="padding: 0.2rem;">
             <img src="static/images/0Reference.jpg" style="width:100%; image-rendering: pixelated;">
+            <div class="is-size-7 mt-1" style="color:#888; max-width: 220px; margin: 0 auto;">
+              For more details and full context, see Figure 15 in the paper.<br>(Note: scaling may affect noise appearance.)
+            </div>
           </div>
           <div class="column is-one-fifth-desktop is-one-fifth-tablet is-2-mobile" style="padding: 0.2rem;">
             <img src="static/images/0PT.jpg" style="width:100%; image-rendering: pixelated;">
@@ -222,25 +242,31 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column">
-        <h2 class="title is-3 has-text-centered">What's New?</h2>
+        <h2 class="title is-3 has-text-centered">We've already got NRC... why NIRC?</h2>
+        <br>
         <figure class="image">
-          <img src="static/images/PathFigure2.svg" alt="Method Overview" style="width: 100%; height: auto;">
-        
-        <div class="content has-text-justified mt-5">
-          <p>
-            We introduce <em>Neural <strong>Incident</strong> Radiance Cache (NIRC)</em>, unlike previous Neural Radiance Caching (NRC) [MRNK21] that predicts outgoing radiance. This enables several key advantages:
-            <li>⚡Immediate cache utilization at primary bounces w/o additional ray tracing and 🎨 BSDF properties preservation (use our new <em>Balanced Termination Heuristic (BTH)</em> for a later path termination)</li>
-            <li>⚡Multiresolution neural hash grid evaluation cost amortized across all directional samples (-70% compute time)</li>
-            <li>🚀With inlined invokations performance scales directly with tensor-core compute power, benefiting from the trend of growing GPUs pure compute power and quantization</li>
-            <li>⏰ For unbiased-rendering NIRC achieves reasonable cache quality in dozens of frames vs thousands for Neural Control Variates (NCV) [MRKN20], as it does not need to predict the integral itself ⟹ <em>no architectural constraints</em>.</li>
-          </ul>
+          <div class="columns">
+            <div class="column is-6">
+              <img src="static/images/BiasedExpl.svg" alt="Method Overview" style="width: 100%; height: auto;">
+            </div>
+            <div class="column is-6">
+              <div class="content has-text-justified">
+                <p>
+                  Our <em>Neural Incident Radiance Cache (NIRC)</em> learns <strong>incoming light</strong> from all directions in real-time, unlike NRC [MRNK21] which predicts <strong>outgoing light</strong>. This key difference enables several advantages:
+                  <li>⚡Immediate cache invokation at primary surface w/o additional rays, but with BSDF properties preservation 🎨</li>
+                  <li>⚡Multiresolution neural hash-grid sampling costs amortized across all directional samples (~70% time of original NRC)</li>
+                  <li>🚀With inlined invokations performance scales directly with tensor-core compute rather than bandwidth, benefiting from the recent GPU-trends and low-precision TFLOPs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
           <div style="margin-bottom: 1%;"></div>
 
 
           <div class="columns">
             <div class="column is-6">
-              <figure class="image">
+              <figure class="image" >
                 <img src="static/images/performance.svg" alt="Performance Comparison" style="width: 100%; height: auto;">
                 <figcaption class="has-text-centered mt-2">Performance study with the Bistro Exterior scene
                   rendered on an RTX 3080 at 1080p. Path-Tracing vs NRC vs NIRC (Ours) with a few low-level optimizations. </figcaption>
@@ -255,6 +281,134 @@
               </figure>
             </div>
           </div>
+
+          <!-- Cache Quality vs. MLP Depth Section -->
+          <div class="section" style="padding-top: 0;">
+            <div class="container is-max-desktop">
+              <div class="content has-text-justified">
+                <h3 class="title is-4 has-text-centered">Scalability from tensor-core compute 💻</h3>
+              
+                <div class="columns">
+                  <div class="column is-5 has-text-centered" style="flex: 0 0 40%; max-width: 40%;">
+                    <img src="static/images/Marked_CQ_CornelBox_Reference.jpg" alt="Marked Cache Quality Reference" style="width:100%; max-width:100%;">
+                    <div class="is-size-6 mt-2"><b>Reference</b></div>
+                    <div class="is-size-7 mt-1" style="color:#888; max-width: 220px; margin: 0 auto;">
+                      For more details and full context, see Figure 15 in the paper, as it doesn't always scale well for noisy scenes.<br>
+                    </div>
+                  </div>
+                  <div class="column is-7" style="flex: 0 0 60%; max-width: 60%;">
+                    <div class="columns is-mobile is-multiline is-centered" style="margin-bottom: 0.5em;">
+                      
+                      <div class="column is-one-quarter has-text-centered">
+                        <img src="static/images/CQ_CornelBox_0_2Layers.jpg" style="width:100%; max-width:180px;">
+                        <div class="is-size-7">2 Layers <br>MSE: 0.56, 0.84ms</div>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <img src="static/images/CQ_CornelBox_0_4Layers.jpg" style="width:100%; max-width:180px;">
+                        <div class="is-size-7">4 Layers <br>MSE: 0.27, 1.24ms</div>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <img src="static/images/CQ_CornelBox_0_6Layers.jpg" style="width:100%; max-width:180px;">
+                        <div class="is-size-7">6 Layers <br>MSE: 0.14, 1.64ms</div>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <img src="static/images/CQ_CornelBox_0_Reference.jpg" style="width:100%; max-width:180px;">
+                        <div class="is-size-7">Reference</div>
+                      </div>
+                    </div>
+                    <div class="columns is-mobile is-multiline is-centered" style="margin-bottom: 0.5em;">
+                      
+                      <div class="column is-one-quarter has-text-centered">
+                        <img src="static/images/CQ_CornelBox_1_2Layers.jpg" style="width:100%; max-width:180px;">
+                        <div class="is-size-7">2 Layers <br>MSE: 0.23, 0.84ms</div>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <img src="static/images/CQ_CornelBox_1_4Layers.jpg" style="width:100%; max-width:180px;">
+                        <div class="is-size-7">4 Layers <br>MSE: 0.21, 1.24ms</div>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <img src="static/images/CQ_CornelBox_1_6Layers.jpg" style="width:100%; max-width:180px;">
+                        <div class="is-size-7">6 Layers <br>MSE: 0.13, 1.64ms</div>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <img src="static/images/CQ_CornelBox_1_Reference.jpg" style="width:100%; max-width:180px;">
+                        <div class="is-size-7">Reference</div>
+                      </div>
+                    </div>
+                    <div class="is-size-7 has-text-right mt-2" style="color:#888;">All timings on RTX 3080</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="title is-3 has-text-centered">🤔 Two-Level Monte Carlo? </h2>
+          <br>
+        <figure class="image">
+          <div class="columns">
+            <div class="column is-6">
+              <img src="static/images/UnbiasedExpl.svg" alt="Unbiased Explanation" style="width: 100%; height: auto;">
+            </div>
+            <div class="column is-6">
+              <div class="content has-text-justified">
+                <p>
+                  We split the rendering estimator into two parts: the <strong><em style="color:#3A7CA5;">Cache-Based Estimator</em></strong> and the <strong><em style="color:#D97A2B;">Residual Error Estimator</em></strong> that compensates for the bias of the first one.
+                  It's similar to Neural Control Variates (NCV) [MRKN20], but NIRC does not need to predict the integral itself ⟹ <em>no neural network architectural constraints</em>!
+                  <br>
+                  <br>
+                  <strong>So, we can use NIRC with <span style="color: green;">no bias</span> and get a reasonable cache quality in 10-20 frames vs 100-1000 for NCV.</strong> Yes, we need to integrate over directions... but it's just <strong>0.5-1.5ms/sample at 1080p on a RTX 4080</strong>!
+              </div>
+            </div>
+          </div>
+
+          <div class="content has-text-centered mt-4">
+              <div class="content has-text-centered">
+                <div class="has-text-centered" style="position: relative; max-width: 700px; margin: 0 auto;">
+                  <div id="equation-spoiler" style="display: flex; flex-direction: column; align-items: center; gap: 0.2em; position: relative;">
+                    <div style="display: flex; align-items: center; gap: 1em;">
+                      <span style="min-width: 170px; color: #A07B3F; text-align: right; font-weight: bold;">Cache-Based Estimator:</span>
+                      <span style="text-align: left;">
+                        \[
+                        {\color{#A07B3F}{\hat{L}_{c}(x, \omega_{o})}} \approx \frac{1}{N_{c}} \sum_{i=1}^{N_{c}} \frac{L_{nirc}(x, \omega_{i}, \phi,\mathbf{w})f_{r}(x,\omega_{i},\omega_{o})\cos\theta_{i}}{p(\omega_{i})}\omega_{o})
+                        \]
+                      </span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1em;">
+                      <span style="min-width: 170px; color: #2CA148; text-align: right; font-weight: bold;">Residual Error Estimator:</span>
+                      <span style="text-align: left;">
+                        
+                        \[
+                        {\color{#2CA148}{\hat{L}_{r}(x, \omega_{o})}} \approx \frac{1}{N_{r}} \sum_{i=1}^{N_{r}}
+                        \frac{(L_{i}(x, \omega_{i})-L_{nirc}(x, \omega_{i},
+                        \phi,\mathbf{w}))f_{r}(x,\omega_{i},\omega_{o})\cos\theta_{i}}{p(\omega_{i})}
+                        \]
+                      </span>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 1em;">
+                      <span style="min-width: 170px; color: #444; text-align: right; font-weight: bold;">Unbiased Estimator:</span>
+                      <span style="text-align: left;">
+                        \[
+                        \hat{L}_{o}(x, \omega_{o}) \approx  L_{e}(x, \omega_{o}) + \hat{L}_{nee}(x, \omega_{o}) + {\color{#A07B3F}{\hat{L}_{c}(x, \omega_{o})}} + {\color{#2CA148}{\hat{L}_{r}(x, \omega_{o})}}
+                        \]
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div id="fade-overlay" style="position: absolute; left: 0; right: 0; top: 20%; bottom: 0; pointer-events: none; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%); transition: opacity 0.3s;"></div>
+                <button id="show-more-btn" class="button is-small is-light" style="margin-top: 1em; position: relative; z-index: 2;">Show me the math</button>
+                <script>
+                  document.getElementById('show-more-btn').onclick = function() {
+                    document.getElementById('fade-overlay').style.opacity = 0;
+                    setTimeout(function() {
+                      document.getElementById('fade-overlay').style.display = 'none';
+                      document.getElementById('show-more-btn').style.display = 'none';
+                    }, 300);
+                  };
+                </script>
+              </div>
+          </div>
+
         </div>
       </div>
     </div>
