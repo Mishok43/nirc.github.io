@@ -255,7 +255,7 @@
                   <li>⚡Multiresolution neural hash-grid sampling costs amortized across all directional samples (~70% time of original NRC)</li>
                   <li>🚀With inlined invokations performance scales directly with tensor-core compute rather than bandwidth, benefiting from the recent GPU-trends and low-precision TFLOPs</li>
                   <br>
-                  So, <strong>if many samples invoked, a NIRC's one is cheaper in 5-10x times compared to NRC sample on average.</strong></li>
+                  So, <strong>if many samples invoked, a NIRC's one is cheaper in 5-10x times compared to NRC's one on average.</strong></li>
                 </ul>
               </div>
             </div>
@@ -411,19 +411,19 @@
 
           <h2 class="title is-3 has-text-centered">So, does it mean that NIRC is better than NRC? </h2>
           <div class="columns is-vcentered mb-2" style="margin-top: 0;">
-            <div class="column is-5">
+            <div class="column is-5" style="padding-top: 0;">
               <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 0.3em; width: 100%; gap: 0.1em;">
-                  <button id="prev-scene" class="button is-light" style="padding: 0.4em 0.6em; font-size: 0.9em;">Prev</button>
-                  <div class="is-size-6" id="scene-name" style="flex-grow: 1; text-align: center; margin: 0;">Bistro Direction</div>
-                  <button id="next-scene" class="button is-light" style="padding: 0.4em 0.6em; font-size: 0.9em;">Next</button>
+                <div style="display: flex; justify-content: center; margin-bottom: 0.2em; width: 100%;">
+                  <button id="prev-scene" class="button is-small">Prev</button>
+                  <span id="scene-name" style="min-width: 180px; text-align: center; padding: 0 0px; align-self: center;">Bistro Direction</span>
+                  <button id="next-scene" class="button is-small">Next</button>
                 </div>
                 <div style="display: flex; align-items: center; justify-content: center;">
                   <span style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; color: #444; margin-right: 0.3em; font-size: 0.9em;">FLIP</span>
                   <img id="scene-plot" src="static/images/BistroDirection_averagepath_flip.svg" style="width:100%; max-width:234px; max-height:364px; margin-bottom: 0.2em;">
                 </div>
-                <div style="margin-bottom: 0.2em; width: 100%; text-align: center; display: flex; justify-content: center; padding-right: 1.1em;">
-                  <span class="is-size-7" id="scene-xlabel">Indirect Bounces</span>
+                <div style="margin-bottom: 0.2em; width: 100%; text-align: center; display: flex; justify-content: center; padding-left: 2.9em;">
+                  <span class="is-size-6" id="scene-xlabel">Indirect Bounces</span>
                 </div>
               </div>
               <script>
@@ -460,13 +460,13 @@
                 };
               </script>
             </div>
-            <div class="column is-7">
-              <div class="content has-text-justified">
+            <div class="column is-7" style="padding-top: 0; padding-bottom: 0; margin-top: -8px;">
+              <div class="content has-text-justified" style="padding-top: 0; margin-top: 0;">
                 <p>
                   Our research shows that the choice between NIRC and NRC depends on your specific requirements. Here's a rule of thumb:
                   <ul>
-                    <li>🔴 <strong>Zero-bias requirement:</strong> Use <em>NIRC</em> with <em>Two-Level Monte Carlo</em>. Note that this may increase variance in complex areas like dense foliage (🌳 trees, bushes, etc).</li>
-                    <li>🔵 <strong>Flexible approach:</strong> Invoke <em>NRC</em> at \(x_{i}\) if it provides sufficient quality. Switch to <em>NIRC</em> if you encounter poor GI, material property preservation issues or visible hash-grid artifacts - <strong>NIRC will save you unnecessary ray bounces that NRC would require otherwise</strong>. If both methods fail, perform another bounce and repeat the logic for \(x_{i+1}\).</li>
+                    <li><strong>Zero-bias requirement:</strong> Use <em>NIRC</em> with <em>Two-Level Monte Carlo</em>. Note that this may increase variance in complex areas like dense foliage (🌳 trees, bushes, etc).</li>
+                    <li><strong>Performance maximization:</strong> Invoke <em>NRC</em> at \(x_{i}\) if it provides sufficient quality. Switch to <em>NIRC</em> if you encounter poor GI, material property preservation issues or visible hash-grid artifacts - <strong>NIRC will save you unnecessary ray bounces that NRC would require otherwise</strong>. If both methods fail, perform another bounce and repeat the logic for \(x_{i+1}\).</li>
                   </ul>
                 </p>
               </div>
