@@ -155,9 +155,7 @@
         <div class="columns is-centered is-mobile is-multiline mb-0" style="width:100%; margin:0 auto;">
           <div class="column is-one-fifth-desktop is-one-fifth-tablet is-2-mobile" style="padding: 0.2rem;">
             <img src="static/images/0Reference.jpg" style="width:100%; image-rendering: pixelated;">
-            <div class="is-size-7 mt-1" style="color:#888; max-width: 220px; margin: 0 auto;">
-              For more details and full context, see Figure 15 in the paper.<br>(Note: scaling may affect noise appearance.)
-            </div>
+            
           </div>
           <div class="column is-one-fifth-desktop is-one-fifth-tablet is-2-mobile" style="padding: 0.2rem;">
             <img src="static/images/0PT.jpg" style="width:100%; image-rendering: pixelated;">
@@ -256,6 +254,8 @@
                   <li>⚡Immediate cache invokation at primary surface w/o additional rays, but with BSDF properties preservation 🎨</li>
                   <li>⚡Multiresolution neural hash-grid sampling costs amortized across all directional samples (~70% time of original NRC)</li>
                   <li>🚀With inlined invokations performance scales directly with tensor-core compute rather than bandwidth, benefiting from the recent GPU-trends and low-precision TFLOPs</li>
+                  <br>
+                  So, <strong>if many samples invoked, a NIRC's one is cheaper in 5-10x times compared to NRC sample on average.</strong></li>
                 </ul>
               </div>
             </div>
@@ -352,18 +352,18 @@
             <div class="column is-6">
               <div class="content has-text-justified">
                 <p>
-                  We split the rendering estimator into two parts: the <strong><em style="color:#3A7CA5;">Cache-Based Estimator</em></strong> and the <strong><em style="color:#D97A2B;">Residual Error Estimator</em></strong> that compensates for the bias of the first one.
+                  We split the rendering estimator into two parts: the <strong><em style="color:#A07B3F;">Cache-Based Estimator</em></strong> and the <strong><em style="color:#2CA148;">Residual Error Estimator</em></strong> that compensates for the bias of the first one.
                   It's similar to Neural Control Variates (NCV) [MRKN20], but NIRC does not need to predict the integral itself ⟹ <em>no neural network architectural constraints</em>!
                   <br>
                   <br>
-                  <strong>So, we can use NIRC with <span style="color: green;">no bias</span> and get a reasonable cache quality in 10-20 frames vs 100-1000 for NCV.</strong> Yes, we need to integrate over directions... but it's just <strong>0.5-1.5ms/sample at 1080p on a RTX 4080</strong>!
+                  <strong>So, we can use NIRC with <span style="color: #2CA148;">no bias</span> and get a reasonable cache quality in 10-20 frames vs 100-1000 for NCV.</strong> Yes, we need to integrate over directions... but it's just <strong>0.5-1.5ms/sample at 1080p on a RTX 4080. </strong>!
               </div>
             </div>
           </div>
 
           <div class="content has-text-centered mt-4">
-              <div class="content has-text-centered">
-                <div class="has-text-centered" style="position: relative; max-width: 700px; margin: 0 auto;">
+              <div class="has-text-centered" style="position: relative; max-width: 700px; margin: 0 auto;">
+                <div style="position: relative; overflow: hidden; max-height: 420px;">
                   <div id="equation-spoiler" style="display: flex; flex-direction: column; align-items: center; gap: 0.2em; position: relative;">
                     <div style="display: flex; align-items: center; gap: 1em;">
                       <span style="min-width: 170px; color: #A07B3F; text-align: right; font-weight: bold;">Cache-Based Estimator:</span>
@@ -396,17 +396,81 @@
                   </div>
                 </div>
                 <div id="fade-overlay" style="position: absolute; left: 0; right: 0; top: 20%; bottom: 0; pointer-events: none; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%); transition: opacity 0.3s;"></div>
-                <button id="show-more-btn" class="button is-small is-light" style="margin-top: 1em; position: relative; z-index: 2;">Show me the math</button>
-                <script>
-                  document.getElementById('show-more-btn').onclick = function() {
-                    document.getElementById('fade-overlay').style.opacity = 0;
-                    setTimeout(function() {
-                      document.getElementById('fade-overlay').style.display = 'none';
-                      document.getElementById('show-more-btn').style.display = 'none';
-                    }, 300);
-                  };
-                </script>
               </div>
+              <button id="show-more-btn" class="button is-small is-light" style="margin-top: 1em; position: relative; z-index: 2;">Show me the math</button>
+              <script>
+                document.getElementById('show-more-btn').onclick = function() {
+                  document.getElementById('fade-overlay').style.opacity = 0;
+                  setTimeout(function() {
+                    document.getElementById('fade-overlay').style.display = 'none';
+                    document.getElementById('show-more-btn').style.display = 'none';
+                  }, 300);
+                };
+              </script>
+          </div>
+
+          <h2 class="title is-3 has-text-centered">So, does it mean that NIRC is better than NRC? </h2>
+          <div class="columns is-vcentered mb-2" style="margin-top: 0;">
+            <div class="column is-5">
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 0.3em; width: 100%; gap: 0.1em;">
+                  <button id="prev-scene" class="button is-light" style="padding: 0.4em 0.6em; font-size: 0.9em;">Prev</button>
+                  <div class="is-size-6" id="scene-name" style="flex-grow: 1; text-align: center; margin: 0;">Bistro Direction</div>
+                  <button id="next-scene" class="button is-light" style="padding: 0.4em 0.6em; font-size: 0.9em;">Next</button>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center;">
+                  <span style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; color: #444; margin-right: 0.3em; font-size: 0.9em;">FLIP</span>
+                  <img id="scene-plot" src="static/images/BistroDirection_averagepath_flip.svg" style="width:100%; max-width:234px; max-height:364px; margin-bottom: 0.2em;">
+                </div>
+                <div style="margin-bottom: 0.2em; width: 100%; text-align: center; display: flex; justify-content: center; padding-right: 1.1em;">
+                  <span class="is-size-7" id="scene-xlabel">Indirect Bounces</span>
+                </div>
+              </div>
+              <script>
+                const scenes = [
+                  {
+                    name: 'Bistro Direction',
+                    img: 'static/images/BistroDirection_averagepath_flip.svg'
+                  },
+                  {
+                    name: 'The White Room',
+                    img: 'static/images/the-white-room_averagepath_flip.svg'
+                  },
+                  {
+                    name: 'Sponza Specular',
+                    img: 'static/images/SponzaSpecular_averagepath_flip.svg'
+                  },
+                  {
+                    name: 'Country Kitchen',
+                    img: 'static/images/CountryKitchen_averagepath_flip.svg'
+                  }
+                ];
+                let sceneIdx = 0;
+                function updateScene() {
+                  document.getElementById('scene-plot').src = scenes[sceneIdx].img;
+                  document.getElementById('scene-name').textContent = scenes[sceneIdx].name;
+                }
+                document.getElementById('prev-scene').onclick = function() {
+                  sceneIdx = (sceneIdx - 1 + scenes.length) % scenes.length;
+                  updateScene();
+                };
+                document.getElementById('next-scene').onclick = function() {
+                  sceneIdx = (sceneIdx + 1) % scenes.length;
+                  updateScene();
+                };
+              </script>
+            </div>
+            <div class="column is-7">
+              <div class="content has-text-justified">
+                <p>
+                  Our research shows that the choice between NIRC and NRC depends on your specific requirements. Here's a rule of thumb:
+                  <ul>
+                    <li>🔴 <strong>Zero-bias requirement:</strong> Use <em>NIRC</em> with <em>Two-Level Monte Carlo</em>. Note that this may increase variance in complex areas like dense foliage (🌳 trees, bushes, etc).</li>
+                    <li>🔵 <strong>Flexible approach:</strong> Invoke <em>NRC</em> at \(x_{i}\) if it provides sufficient quality. Switch to <em>NIRC</em> if you encounter poor GI, material property preservation issues or visible hash-grid artifacts - <strong>NIRC will save you unnecessary ray bounces that NRC would require otherwise</strong>. If both methods fail, perform another bounce and repeat the logic for \(x_{i+1}\).</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -414,6 +478,8 @@
     </div>
   </div>
 </section>
+
+
 
 
 
