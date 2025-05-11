@@ -203,7 +203,7 @@
   <div class="container is-max-desktop">
     <div class="content has-text-justified">
       <p style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4); padding: 20px; border-radius: 10px; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
-        <strong style="color: #FFE66D;">TLTR:</strong> We present <span style="color: #FFE66D;">Neural Incident Radiance Cache (NIRC)</span> for efficient fully-fused neural network-based Global Illumination integration, combined with <span style="color: #FFE66D;">Two-Level Monte Carlo</span> for unbiased results - achieving faster training and better representation than previous methods.
+        <strong style="color: #FFE66D;">TLTR:</strong> We present <span style="color: #FFE66D;">Neural Incident Radiance Cache (NIRC)</span> for efficient fully-fused neural network-based Global Illumination integration, combined with <span style="color: #FFE66D;">Two-Level Monte Carlo</span> for unbiased results - achieving variance reduction and performance improvement better than previous methods.
       </p>
     </div>
   </div>
@@ -409,69 +409,168 @@
               </script>
           </div>
 
+          <style>
+            /* overall two-column container */
+            .scene-container {
+              display: flex;
+              align-items: flex-start;  /* tops aligned */
+              gap: 5%;                /* space between panels */
+              margin: 1em 0;
+            }
+          
+            /* left panel: fixed width, centered contents */
+            .scene-left {
+              width: 200px;             /* = max-width of image */
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+          
+            /* smaller title */
+            h2.scene-title {
+              font-size: 1.5rem;        /* Bulma is-4 */
+              text-align: center;
+              margin-bottom: 1rem;
+            }
+          
+            /* Prev/Name/Next row */
+            .scene-controls {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              margin-bottom: 0.5rem;
+            }
+            .scene-controls button {
+    background: rgba(0, 0, 0, 0.1);  /* minimal light gray background */
+    border: none;
+    font-size: 0.9rem;      /* slightly smaller arrows */
+    padding: 0.1em 0.4em;   /* tighter padding */
+    cursor: pointer;
+    border-radius: 3px;     /* subtle rounded corners */
+  }
+            #scene-name {
+    font-weight: bold;
+    font-size: 0.95rem;
+    min-width: 100px;
+    white-space: nowrap;    /* keep on one line */
+    text-align: center;
+  }
+
+          
+            /* plot + FLIP label */
+            .scene-plot-row {
+              display: flex;
+              align-items: center;
+            }
+            .scene-flip-label {
+              writing-mode: vertical-rl;
+              transform: rotate(180deg);
+              margin-right: 8px;
+              font-weight: bold;
+              font-size: 0.9rem;
+            }
+            #scene-plot {
+              max-width: 200px;
+              width: 100%;
+              height: auto;
+            }
+          
+            /* x-axis label under image only */
+            .scene-xlabel {
+              width: 200px;             /* same as img max-width */
+              text-align: center;
+              margin-top: 4px;
+              font-size: 0.9rem;
+              margin-right: -45%;
+            }
+          
+            /* right panel: fluid */
+            .scene-right {
+              flex: 1;
+            }
+          </style>
+          
+          <!-- smaller title -->
           <h2 class="title is-3 has-text-centered">So, does it mean that NIRC is better than NRC? </h2>
-          <div class="columns is-vcentered mb-2" style="margin-top: 0;">
-            <div class="column is-5" style="padding-top: 0;">
-              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <div style="display: flex; justify-content: center; margin-bottom: 0.2em; width: 100%;">
-                  <button id="prev-scene" class="button is-small">Prev</button>
-                  <span id="scene-name" style="min-width: 180px; text-align: center; padding: 0 0px; align-self: center;">Bistro Direction</span>
-                  <button id="next-scene" class="button is-small">Next</button>
-                </div>
-                <div style="display: flex; align-items: center; justify-content: center;">
-                  <span style="writing-mode: vertical-rl; transform: rotate(180deg); font-weight: bold; color: #444; margin-right: 0.3em; font-size: 0.9em;">FLIP</span>
-                  <img id="scene-plot" src="static/images/BistroDirection_averagepath_flip.svg" style="width:100%; max-width:234px; max-height:364px; margin-bottom: 0.2em;">
-                </div>
-                <div style="margin-bottom: 0.2em; width: 100%; text-align: center; display: flex; justify-content: center; padding-left: 2.9em;">
-                  <span class="is-size-6" id="scene-xlabel">Indirect Bounces</span>
+          
+          
+          <div class="scene-container">
+            <!-- LEFT -->
+            <div class="scene-left">
+              <div class="scene-controls">
+                <div style="margin-left: 40%;">
+                  <span id="scene-name">Bistro Direction</span>
+                  <div style="margin-left: 17%;">
+                  <button id="prev-scene">prev</button>
+                  <button id="next-scene">next</button>
+                  </div>
                 </div>
               </div>
-              <script>
-                const scenes = [
-                  {
-                    name: 'Bistro Direction',
-                    img: 'static/images/BistroDirection_averagepath_flip.svg'
-                  },
-                  {
-                    name: 'The White Room',
-                    img: 'static/images/the-white-room_averagepath_flip.svg'
-                  },
-                  {
-                    name: 'Sponza Specular',
-                    img: 'static/images/SponzaSpecular_averagepath_flip.svg'
-                  },
-                  {
-                    name: 'Country Kitchen',
-                    img: 'static/images/CountryKitchen_averagepath_flip.svg'
-                  }
-                ];
-                let sceneIdx = 0;
-                function updateScene() {
-                  document.getElementById('scene-plot').src = scenes[sceneIdx].img;
-                  document.getElementById('scene-name').textContent = scenes[sceneIdx].name;
-                }
-                document.getElementById('prev-scene').onclick = function() {
-                  sceneIdx = (sceneIdx - 1 + scenes.length) % scenes.length;
-                  updateScene();
-                };
-                document.getElementById('next-scene').onclick = function() {
-                  sceneIdx = (sceneIdx + 1) % scenes.length;
-                  updateScene();
-                };
-              </script>
+          
+              <div class="scene-plot-row">
+                <span class="scene-flip-label">FLIP</span>
+                <img
+                  id="scene-plot"
+                  src="static/images/BistroDirection_averagepath_flip.svg"
+                  alt="scene plot"
+                >
+              </div>
+          
+              <div class="scene-xlabel">Indirect Bounces</div>
+              
+              
             </div>
-            <div class="column is-7" style="padding-top: 0; padding-bottom: 0; margin-top: -8px;">
-              <div class="content has-text-justified" style="padding-top: 0; margin-top: 0;">
+          
+            <!-- RIGHT -->
+            <div class="scene-right">
+              <div class="content">
                 <p>
+                  <br>
+                  <br>
                   Our research shows that the choice between NIRC and NRC depends on your specific requirements. Here's a rule of thumb:
-                  <ul>
-                    <li><strong>Zero-bias requirement:</strong> Use <em>NIRC</em> with <em>Two-Level Monte Carlo</em>. Note that this may increase variance in complex areas like dense foliage (🌳 trees, bushes, etc).</li>
-                    <li><strong>Performance maximization:</strong> Invoke <em>NRC</em> at \(x_{i}\) if it provides sufficient quality. Switch to <em>NIRC</em> if you encounter poor GI, material property preservation issues or visible hash-grid artifacts - <strong>NIRC will save you unnecessary ray bounces that NRC would require otherwise</strong>. If both methods fail, perform another bounce and repeat the logic for \(x_{i+1}\).</li>
-                  </ul>
+                </p>
+                <ul>
+                  <li>
+                    <strong style="color: #2CA148;">Zero-bias requirement:</strong> Use <em>NIRC</em> with <em>Two-Level Monte Carlo</em>. Note that this may increase variance in complex areas like dense foliage (🌳 trees, bushes, etc).
+                  </li>
+                  <li>
+                    <strong style="color: #A07B3F;">Performance maximization:</strong> Invoke <em>NRC</em> at \(x_i\) if it provides sufficient quality. Switch to <em>NIRC</em> if you encounter poor GI, material property preservation issues or visible hash-grid artifacts – <strong>NIRC will save you unnecessary ray bounces that NRC would require otherwise.</strong> If both methods fail, perform another bounce and repeat the logic for \(x_{i+1}\).
+                  </li>
+                </ul>
+                <p>
+                  <span style="font-size: 0.85rem; color: #537B8D;"><strong style="font-size: 0.85rem; color: #537B8D;">  NRC (1spp)</strong></span> | <span style="font-size: 0.85rem; color: #9B5C6F;"><strong style="font-size: 0.85rem; color: #9B5C6F;">NIRC (1spp)</strong></span>
+                  <br>
+                  You can see how much less indirect rays you need to trace by employing <em>NIRC</em> if the render quality satisfies your requirements.
                 </p>
               </div>
             </div>
           </div>
+          
+          <script>
+            const scenes = [
+              { name: 'Bistro Direction', img: 'static/images/BistroDirection_averagepath_flip.svg' },
+              { name: 'The White Room',  img: 'static/images/the-white-room_averagepath_flip.svg' },
+              { name: 'Sponza Specular',  img: 'static/images/SponzaSpecular_averagepath_flip.svg' },
+              { name: 'Country Kitchen',  img: 'static/images/CountryKitchen_averagepath_flip.svg' }
+            ];
+            let sceneIdx = 0;
+            function updateScene() {
+              const plot = document.getElementById('scene-plot');
+              const name = document.getElementById('scene-name');
+              plot.src = scenes[sceneIdx].img;
+              name.textContent = scenes[sceneIdx].name;
+            }
+            document.getElementById('prev-scene').onclick = () => {
+              sceneIdx = (sceneIdx - 1 + scenes.length) % scenes.length;
+              updateScene();
+            };
+            document.getElementById('next-scene').onclick = () => {
+              sceneIdx = (sceneIdx + 1) % scenes.length;
+              updateScene();
+            };
+          </script>
+          
+          
 
         </div>
       </div>
